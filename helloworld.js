@@ -1,17 +1,17 @@
 /**
  * 
  */
-
-Ext.setup(
-		icon:'icon.jpg',
-		glossOnIcon:false,
-		tabletStartupScreen:'icon.jpg',
-		phoneStartupScreen:'icon.jpg',
-		onReady:function(){
-			var panel = new Ext.Panel({
-				fullscrren:true,
-				html:'Hello World'
-			});
-			panel.show();
-		}
+Ext.application(
+{
+	name:'MyApp',
+	launch:function(){
+		var panel =Ext.create('Ext.Panel',{
+			id:'mysqlPanel',
+			html:'askdjhbawkdhjajwdkbajbfwj'
+		});
+		Ext.Viewport.add(panel);
+		Ext.get('mysqlPanel').addCls('colorRed');
+		alert("到底了");
+	}
+}
 );
